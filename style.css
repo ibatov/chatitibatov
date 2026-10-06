@@ -1,0 +1,45 @@
+:root{--bg:#fff;--side:#fff;--chatbg:#e7ebf0;--text:#111;--mut:#707579;--acc:#3390ec;--me:#e1ffc7;--other:#fff;--line:#e6e6e6;--hover:#f1f3f4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17212b;--side:#17212b;--chatbg:#0e1621;--text:#f5f5f5;--mut:#8b9aa8;--acc:#5eb5f7;--me:#2b5278;--other:#182533;--line:#0e1621;--hover:#202b36}}
+:root[data-theme="dark"]{--bg:#17212b;--side:#17212b;--chatbg:#0e1621;--text:#f5f5f5;--mut:#8b9aa8;--acc:#5eb5f7;--me:#2b5278;--other:#182533;--line:#0e1621;--hover:#202b36}
+*{box-sizing:border-box}html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#app{display:flex;height:100%}
+#side{width:320px;border-right:1px solid var(--line);display:flex;flex-direction:column;background:var(--side)}
+.top{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line);min-height:56px}
+.top h2{margin:0;font-size:17px;flex:1}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.ib{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:19px;color:var(--mut)}.ib:hover{background:var(--hover)}
+#list{overflow:auto;flex:1}
+.ch{display:flex;gap:10px;padding:9px 12px;align-items:center;width:100%;text-align:left}.ch:hover,.ch.on{background:var(--hover)}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:600;flex:none}
+.ch b{display:block}.ch small{color:var(--mut)}
+#main{flex:1;display:flex;flex-direction:column;min-width:0;background:var(--chatbg)}
+#head{background:var(--side);display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--line);min-height:56px}
+#back{display:none}
+#msgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:4px}
+.m{max-width:min(78%,480px);padding:6px 10px 4px;border-radius:12px;background:var(--other);align-self:flex-start;word-wrap:break-word;overflow-wrap:anywhere;box-shadow:0 1px 1px rgba(0,0,0,.1)}
+.m.me{background:var(--me);align-self:flex-end}
+.m .n{font-size:13px;font-weight:600;color:var(--acc)}
+.m img{max-width:100%;max-height:320px;border-radius:8px;display:block;margin:2px 0}
+.m .t{font-size:11px;color:var(--mut);text-align:right;margin-top:1px}
+.m a.f{display:flex;gap:8px;align-items:center;color:var(--acc);text-decoration:none}
+.m .tx{white-space:pre-wrap}
+#bar{background:var(--side);display:flex;align-items:flex-end;gap:6px;padding:8px}
+#in{flex:1;border:0;outline:0;resize:none;background:var(--hover);color:var(--text);border-radius:20px;padding:9px 14px;max-height:120px;font:inherit}
+#send{background:var(--acc);color:#fff;width:40px;height:40px;border-radius:50%;font-size:18px}
+#emo{display:none;background:var(--side);padding:6px 10px;flex-wrap:wrap;gap:2px}#emo button{font-size:24px;padding:3px 5px}
+.empty{margin:auto;color:var(--mut);background:var(--side);padding:6px 14px;border-radius:14px}
+#note{font-size:12px;color:var(--mut);padding:8px 12px}
+.top{position:relative}
+#menu{display:none;position:absolute;right:10px;top:50px;z-index:5;background:var(--side);border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,.25);min-width:170px;padding:4px}
+#menu button,.row{display:flex;width:100%;gap:10px;align-items:center;padding:10px 12px;border-radius:8px;text-align:left}
+#menu button:hover,.row:hover{background:var(--hover)}
+#res .row small{color:var(--mut)}
+#ov{display:none;position:fixed;inset:0;z-index:10;background:rgba(0,0,0,.45);align-items:center;justify-content:center;padding:16px}
+#card{background:var(--side);border-radius:14px;width:100%;max-width:380px;max-height:90%;overflow:auto;padding:14px}
+#card h3{margin:0 0 10px;font-size:17px;display:flex;align-items:center;gap:6px}#card h3 span{flex:1}
+#card input,#card textarea{width:100%;border:1px solid var(--line);background:var(--hover);color:var(--text);border-radius:10px;padding:9px 12px;font:inherit;margin:6px 0;outline:0}
+#card .pb{background:var(--acc);color:#fff;border-radius:10px;padding:10px 14px;width:100%;margin-top:6px}
+#card .ok{color:var(--acc);padding:10px 0}
+.tk{padding:8px 0;border-bottom:1px solid var(--line)}.tk small{color:var(--mut)}
+#note{font-size:12px;color:var(--mut);padding:8px 12px}
+@media(max-width:700px){#side{width:100%}#main{display:none}#app.chat #side{display:none}#app.chat #main{display:flex}#back{display:grid}}

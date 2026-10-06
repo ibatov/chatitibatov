@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><title>Чат</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="app">
+ <aside id="side">
+  <div class="top"><h2>Чаты</h2><button class="ib" id="new" title="Новый чат">✎</button><button class="ib" id="srch" title="Поиск людей">🔍</button><button class="ib" id="more" title="Ещё">⋮</button><div id="menu"><button id="mset">⚙️ Настройки</button></div></div>
+  <div id="list"></div><div id="note"></div>
+ </aside>
+ <section id="main">
+  <div id="head"><button class="ib" id="back">←</button><div class="av" id="hav"></div><div><b id="hname"></b><br><small id="hsub" style="color:var(--mut)"></small></div></div>
+  <div id="msgs"></div>
+  <div id="emo"></div>
+  <div id="bar">
+   <button class="ib" id="eb">😊</button>
+   <button class="ib" id="ab">📎</button>
+   <input type="file" id="file" hidden>
+   <textarea id="in" rows="1" placeholder="Сообщение"></textarea>
+   <button id="send">➤</button>
+  </div>
+ </section>
+</div>
+<div id="ov"><div id="card"></div></div>
+<script src="script.js"></script></body></html>
